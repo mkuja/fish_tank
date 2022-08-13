@@ -1,0 +1,10 @@
+{
+  "name": "websAsciiquarium",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Mikko",
+  "license": "MIT",
+  "dependencies": {
+    "xterm": "^4.19.0"
+  }
+}
