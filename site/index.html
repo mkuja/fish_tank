@@ -12,12 +12,13 @@
 </div>
 <script>
     console.log("running_script")
+    // var term = new Terminal({cols: 120, rows: 60});
     var term = new Terminal();
     term.open(document.getElementById('terminal'));
     webSocket = new WebSocket("ws://localhost:8000/aquarium");
+    webSocket.onopen = () => { console.log("Opened websocket connection.") }
+    webSocket.onerror = (err) => console.log(err)
     webSocket.onmessage = (ev) => {
-        // console.log(ev)
-        console.log(term.cols, term.rows)
         term.write(ev.data)
     }
 </script>
